@@ -30,7 +30,7 @@ public class SingletonChromeConnection {
         if(webDriverThreadLocal.get()!= null){
             return (ChromeDriver)webDriverThreadLocal.get();
         }
-
+        System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver.exe");
         WebDriver instance = new ChromeDriver(){
             {
                 manage().timeouts().implicitlyWait(15,TimeUnit.SECONDS);
@@ -39,4 +39,5 @@ public class SingletonChromeConnection {
         webDriverThreadLocal.set(instance);
         return (ChromeDriver)webDriverThreadLocal.get();
     }
+
 }

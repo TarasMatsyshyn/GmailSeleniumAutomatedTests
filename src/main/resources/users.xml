@@ -6,7 +6,12 @@
     </userModel>
 
     <userModel>
-        <login>irisha.ruda85@gmail.com</login>
-        <password>ruda1234</password>
+        <login>iryna123first@gmail.com</login>
+        <password>A1aB2bC3c</password>
     </userModel>
+
+    <!--<userModel>-->
+        <!--<login>irisha.ruda85@gmail.com</login>-->
+        <!--<password>ruda1234</password>-->
+    <!--</userModel>-->
 </userModels>

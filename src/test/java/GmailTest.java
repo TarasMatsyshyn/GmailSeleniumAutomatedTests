@@ -2,9 +2,7 @@ import businessObject.GmailDeleteImportantMessagesBO;
 import businessObject.GmailMarkInputMessagesBO;
 import model.UserModel;
 import org.testng.Assert;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.DataProvider;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 import pageObjects.GmailLoginPO;
 import utils.PropertiesParser;
 import utils.SingletonChromeConnection;
@@ -60,9 +58,9 @@ public class GmailTest {
         Assert.assertEquals(deleteImportantMessagesBO.deleteImportantMessages(),true);
     }
 
-    @AfterMethod
+    @AfterClass
     public void closeDriver() {
-//        SingletonChromeConnection.getDriver().quit();
+//        SingletonChromeConnection.getDriver().close();
     }
 
 }
