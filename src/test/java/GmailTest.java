@@ -29,6 +29,15 @@ public class GmailTest {
         data[1][0] = users.get(1).getLogin();
         data[1][1] = users.get(1).getPassword();
 
+        data[2][0] = users.get(2).getLogin();
+        data[2][1] = users.get(2).getPassword();
+
+        data[3][0] = users.get(3).getLogin();
+        data[3][1] = users.get(3).getPassword();
+
+        data[4][0] = users.get(4).getLogin();
+        data[4][1] = users.get(4).getPassword();
+
         return data;
     }
 
@@ -37,12 +46,8 @@ public class GmailTest {
     @Test(dataProvider = "getData")
     public void gmailTest(String email, String password) throws Exception{
 
-        PropertiesParser propertiesParser = new PropertiesParser();
-
-        //Get credentials from xml file
-//        UserModel testUserModel = userModelList.get(0);
-
         //Get start gmail page
+        PropertiesParser propertiesParser = new PropertiesParser();
         SingletonChromeConnection.getDriver().get(propertiesParser.getBaseUrl());
 
         //Log in
@@ -60,7 +65,8 @@ public class GmailTest {
 
     @AfterClass
     public void closeDriver() {
-//        SingletonChromeConnection.getDriver().close();
+        SingletonChromeConnection.getDriver().close();
+        SingletonChromeConnection.getDriver().quit();
     }
 
 }

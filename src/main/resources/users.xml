@@ -2,7 +2,7 @@
 <userModels>
     <userModel>
         <login>taras.matsyshyn@gmail.com</login>
-        <password>****</password>
+        <password>.hitman47</password>
     </userModel>
 
     <userModel>
@@ -10,8 +10,19 @@
         <password>A1aB2bC3c</password>
     </userModel>
 
-    <!--<userModel>-->
-        <!--<login>irisha.ruda85@gmail.com</login>-->
-        <!--<password>ruda1234</password>-->
-    <!--</userModel>-->
+    <userModel>
+        <login>irisha.ruda85@gmail.com</login>
+        <password>ruda1234</password>
+    </userModel>
+
+    <userModel>
+        <login>papai9919@gmail.com</login>
+        <password>123456Pp</password>
+    </userModel>
+
+    <userModel>
+        <login>olegmarushchak.test@gmail.com</login>
+        <password>1234567890qwerty</password>
+    </userModel>
+
 </userModels>

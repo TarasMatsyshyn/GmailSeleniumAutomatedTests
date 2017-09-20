@@ -13,19 +13,6 @@ public class SingletonChromeConnection {
     private SingletonChromeConnection(){
     }
 
-//    public static ChromeDriver getDriver(){
-//        if (driver == null){
-////            System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver.exe");
-//            driver = new ChromeDriver(){
-//                {
-//                    manage().window().maximize();
-//                    manage().timeouts().implicitlyWait(15,TimeUnit.SECONDS);
-//                }
-//            };
-//        }
-//        return driver;
-//    }
-
     public static ChromeDriver getDriver(){
         if(webDriverThreadLocal.get()!= null){
             return (ChromeDriver)webDriverThreadLocal.get();

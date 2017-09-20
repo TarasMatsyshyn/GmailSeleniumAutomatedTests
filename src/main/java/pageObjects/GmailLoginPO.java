@@ -3,6 +3,7 @@ package pageObjects;
 import controls.TextInput;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.How;
 
 public class GmailLoginPO extends PageObject {
 
@@ -15,7 +16,7 @@ public class GmailLoginPO extends PageObject {
     @FindBy(xpath = "//*[@id=\"password\"]/div[1]/div/div[1]/input")
     private WebElement passwordInput;
 
-    @FindBy(xpath = "//*[@id=\"passwordNext\"]/div[2]")
+    @FindBy(how = How.ID, id = "passwordNext")
     private WebElement passwordButton;
 
     public void logIn(String email, String password){
@@ -23,6 +24,6 @@ public class GmailLoginPO extends PageObject {
         loginButton.click();
 
         passwordInput.sendKeys(password);
-//        passwordButton.click();
+        passwordButton.click();
     }
 }
