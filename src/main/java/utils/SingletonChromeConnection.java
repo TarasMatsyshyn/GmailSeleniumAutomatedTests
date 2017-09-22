@@ -27,4 +27,9 @@ public class SingletonChromeConnection {
         return (ChromeDriver)webDriverThreadLocal.get();
     }
 
+    public static void quit() {
+        getDriver().close();
+        getDriver().quit();
+    }
+
 }

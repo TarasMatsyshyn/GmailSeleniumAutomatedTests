@@ -17,12 +17,9 @@ public class GmailImportantMessagePO {
 
     @FindAll(@FindBy(xpath = "//div[@role=\"checkbox\"]"))
     private List<WebElement> checkboxes;
-    @FindBy(xpath = "" )
-    private WebElement importantMessage;
 
     public GmailImportantMessagePO() {
         WebDriver webDriver = SingletonChromeConnection.getDriver();
-        webDriver.findElement(By.xpath("//*[@id=\":iy\"]/div/div[2]")).click();
         PageFactory.initElements(webDriver,this);
     }
 

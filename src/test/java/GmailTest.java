@@ -45,10 +45,9 @@ public class GmailTest {
         deleteImportantMessagesBO.deleteImportantMessages();
     }
 
-    @AfterMethod
-    public void closeDriver() {
-        SingletonChromeConnection.getDriver().close();
-        SingletonChromeConnection.getDriver().quit();
+    @AfterTest
+    public void quit() {
+        SingletonChromeConnection.quit();
     }
 
     private List<UserModel> userModels() throws Exception{
