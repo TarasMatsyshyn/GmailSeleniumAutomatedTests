@@ -45,7 +45,7 @@ public class GmailTest {
         deleteImportantMessagesBO.deleteImportantMessages();
     }
 
-    @AfterTest
+    @AfterMethod
     public void quit() {
         SingletonChromeConnection.quit();
     }

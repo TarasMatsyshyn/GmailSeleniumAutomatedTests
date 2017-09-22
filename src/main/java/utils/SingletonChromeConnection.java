@@ -26,10 +26,12 @@ public class SingletonChromeConnection {
         webDriverThreadLocal.set(instance);
         return (ChromeDriver)webDriverThreadLocal.get();
     }
-
     public static void quit() {
-        getDriver().close();
-        getDriver().quit();
+        try {
+            webDriverThreadLocal.get().quit();
+        }finally {
+//            webDriverThreadLocal.remove();
+        }
     }
 
 }

@@ -39,7 +39,6 @@ public abstract class AbstractElement implements WebElement {
 
     @Override
     public void submit() {
-
     }
 
     @Override
