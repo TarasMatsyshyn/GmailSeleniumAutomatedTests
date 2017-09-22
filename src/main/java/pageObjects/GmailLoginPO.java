@@ -19,10 +19,12 @@ public class GmailLoginPO extends PageObject {
     @FindBy(how = How.ID, id = "passwordNext")
     private WebElement passwordButton;
 
-    public void logIn(String email, String password){
+    public void typeLogin(String email){
         loginInput.sendKeys(email);
         loginButton.click();
+    }
 
+    public void typePassword(String password){
         passwordInput.sendKeys(password);
         passwordButton.click();
     }

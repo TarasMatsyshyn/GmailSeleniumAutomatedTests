@@ -3,8 +3,15 @@ package businessObject;
 import pageObjects.GmailInputMessagesPO;
 
 public class GmailMarkInputMessagesBO {
-    public void markMessagesAsImportant(){
-        GmailInputMessagesPO gmailInputMessagesPO = new GmailInputMessagesPO();
-        gmailInputMessagesPO.markMessages();
+    GmailInputMessagesPO gmailInputMessagesPO = new GmailInputMessagesPO();
+
+    public boolean markMessagesAsImportant(){
+       try {
+           gmailInputMessagesPO.markMessages();
+           gmailInputMessagesPO.goToImportant();
+       }catch (Exception e){
+           return false;
+       }
+       return true;
     }
 }

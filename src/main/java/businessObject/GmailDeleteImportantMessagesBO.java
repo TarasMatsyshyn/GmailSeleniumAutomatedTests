@@ -3,8 +3,10 @@ package businessObject;
 import pageObjects.GmailImportantMessagePO;
 
 public class GmailDeleteImportantMessagesBO {
-    public boolean deleteImportantMessages(){
+    public void deleteImportantMessages(){
         GmailImportantMessagePO gmailImportantMessagePO = new GmailImportantMessagePO();
-        return gmailImportantMessagePO.deleteFirstThreeMessages();
+        gmailImportantMessagePO.goToImportant();
+        gmailImportantMessagePO.selectFirstThreeCheckButtons();
+        gmailImportantMessagePO.deleteCheckedMessages();
     }
 }

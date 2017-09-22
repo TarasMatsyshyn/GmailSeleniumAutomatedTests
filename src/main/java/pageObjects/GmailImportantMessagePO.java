@@ -16,26 +16,27 @@ public class GmailImportantMessagePO {
     private ChromeDriver driver = SingletonChromeConnection.getDriver();
 
     @FindAll(@FindBy(xpath = "//div[@role=\"checkbox\"]"))
-    public List<WebElement> checkboxes;
+    private List<WebElement> checkboxes;
+    @FindBy(xpath = "" )
+    private WebElement importantMessage;
 
     public GmailImportantMessagePO() {
         WebDriver webDriver = SingletonChromeConnection.getDriver();
+        webDriver.findElement(By.xpath("//*[@id=\":iy\"]/div/div[2]")).click();
         PageFactory.initElements(webDriver,this);
     }
 
-    public boolean deleteFirstThreeMessages(){
-        selectFirstThreeCheckButtons();
-        deleteCheckedMessages();
-        return true;
+    public void goToImportant(){
     }
 
-    private void selectFirstThreeCheckButtons(){
+
+    public void selectFirstThreeCheckButtons(){
             for (int i = 0; i < 3; i++) {
                 checkboxes.get(i).click();
             }
     }
 
-    private void deleteCheckedMessages(){
+    public void deleteCheckedMessages(){
         driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
         driver.findElement(By.xpath("//*[@id=\":5\"]/div[2]/div[1]/div[1]/div/div/div[2]/div[3]/div/div")).click();
     }

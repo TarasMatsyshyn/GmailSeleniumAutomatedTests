@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <userModels>
     <userModel>
-        <login>taras.matsyshyn@gmail.com</login>
-        <password>.hitman47</password>
+        <login>test.matsyshyn.1@gmail.com</login>
+        <password>passwordtest</password>
     </userModel>
 
     <userModel>
-        <login>iryna123first@gmail.com</login>
-        <password>A1aB2bC3c</password>
+        <login>test.matsyshyn.2@gmail.com</login>
+        <password>passwordtest</password>
     </userModel>
 
     <userModel>
-        <login>irisha.ruda85@gmail.com</login>
-        <password>ruda1234</password>
+        <login>test.matsyshyn.3@gmail.com</login>
+        <password>passwordtest</password>
     </userModel>
 
     <userModel>
-        <login>papai9919@gmail.com</login>
-        <password>123456Pp</password>
+        <login>test.matsyshyn.4@gmail.com</login>
+        <password>passwordtest</password>
     </userModel>
 
     <userModel>
-        <login>olegmarushchak.test@gmail.com</login>
-        <password>1234567890qwerty</password>
+        <login>test.matsyshyn.5@gmail.com</login>
+        <password>passwordtest</password>
     </userModel>
 
 </userModels>
